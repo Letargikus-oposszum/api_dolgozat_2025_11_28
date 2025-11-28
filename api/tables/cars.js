@@ -11,4 +11,4 @@ export const getCars = () => db.prepare("SELECT * FROM cars").all();
 
 export const postCar = (brand, color, lplate) => db.prepare("INSERT INTO cars (brand, color, lplate) VALUES (?,?,?)").run(brand, color, lplate);
 
-export const updateCar = (brand, color, lplate, id) => db.prepare("UPDATE cars SET brand, color, lplate VALUES (?,?,?) WHERE id = ?").all(brand, color, lplate, id);
+export const updateCar = (brand, color, lplate, id) => db.prepare("UPDATE cars SET brand, color, lplate WHERE id = ?").all(brand, color, lplate, id);

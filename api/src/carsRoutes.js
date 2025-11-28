@@ -21,7 +21,7 @@ carRoutes.put("/api/cars/:id",(req,res)=>{
     const id = req.params.id;
     const {brand, color, lplate} = req.body;
 
-    if (!brand,color,lplate){
+    if (!brand,!color,!lplate){
         return res.status(400).json({message:"Some data are missing!"});
     }
 
